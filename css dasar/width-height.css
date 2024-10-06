@@ -1,0 +1,19 @@
+div {
+    height: 200px;
+    width: 200px;
+    background-color: #4793AF;
+
+    /* margin-top: 200px;
+    margin-right: 170px;
+    margin-bottom: 100px;
+    margin-left: 150px; */
+
+    margin: 200px 170px 100px 150px;
+
+    padding-right: 200px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

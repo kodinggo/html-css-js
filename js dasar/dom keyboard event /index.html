@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<body>
+    <form action="">
+        <textarea name="" id="textbox"></textarea>
+    </form>
+
+    <script>
+        var words = '';
+        document.getElementById('textbox').addEventListener('keydown', function(event) {
+            words += event.key;
+            console.log(words);
+        });
+
+        document.getElementById('textbox').addEventListener('keyup', function(event) {
+            console.log('kamu melepas tombol keyboard');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="foo">xx</p>
+    <p id="bar">xx</p>
+    <p class="bar">xx</p>
+    <p class="bar">xx</p>
+    <script>
+        document.getElementById('foo').style.backgroundColor='red';
+        document.querySelector('#bar').style.backgroundColor='green';
+        document.querySelector('.bar').style.backgroundColor='yellow';
+
+        var elementBySelectorAll = document.querySelectorAll('.bar'); // NodeList | array
+        console.log(elementBySelectorAll);
+        elementBySelectorAll.forEach(function(element) { 
+            element.style.border = '1px solid';
+        });
+        for (var i = 0; i < elementBySelectorAll.length; i++) {
+            elementBySelectorAll[i].style.borderColor = 'red';
+        }
+
+        var elementByClasses = document.getElementsByClassName('bar'); // HTMLCollection | array
+        console.log(elementByClasses);
+        for (var i = 0; i < elementByClasses.length; i++) {
+            elementByClasses[i].style.textDecoration = 'line-through';
+        }
+
+        var elementByTagName = document.getElementsByTagName('p'); // HTMLCollection | array
+        console.log(elementByTagName);
+        for (var i = 0; i < elementByTagName.length; i++) {
+            elementByTagName[i].style.color = 'blue';
+        }
+    </script>
+</body>
+</html>

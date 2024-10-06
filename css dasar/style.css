@@ -1,0 +1,29 @@
+button {
+    background-color: brown;
+}
+
+.cat {
+    background-color: chartreuse;
+}
+
+#fruits {
+    color: blue;
+}
+
+.test-color {
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 255, 0);
+}
+
+.test-color-hex {
+    color: #00FF00;
+    background: hsla(241, 100%, 30%, 1);
+
+background: linear-gradient(180deg, hsla(241, 100%, 30%, 1) 0%, hsla(0, 69%, 54%, 1) 100%);
+
+background: -moz-linear-gradient(180deg, hsla(241, 100%, 30%, 1) 0%, hsla(0, 69%, 54%, 1) 100%);
+
+background: -webkit-linear-gradient(180deg, hsla(241, 100%, 30%, 1) 0%, hsla(0, 69%, 54%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#03009A", endColorstr="#DA3737", GradientType=1 );
+}

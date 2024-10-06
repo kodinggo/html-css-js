@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            text-align: center;
+        }
+        .power {
+            width: 300px;
+            height: 50px;
+            background-color: gray;
+            margin: auto;
+        }
+        #powerIndicator {
+            width: 100%;
+            height: 50px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img id="bag" src="./bag.png" alt="">
+    </p>
+    <div class="power">
+        <div id="powerIndicator"></div>
+    </div>
+    <p>
+        <button onclick="punch()">Punch</button>
+        <button onclick="reset()">Reset</button>
+    </p>
+    
+    <script>
+        var currentPower = 100;
+        function punch() {
+            if (currentPower > 0) {
+                currentPower -= 10;
+                document.getElementById("powerIndicator").style.width = currentPower + "%";
+
+                if (currentPower == 0) {
+                    document.getElementById("bag").src = "./bag-burst.png";
+                }
+            }
+        }
+        function reset() {
+            currentPower = 100;
+            document.getElementById("powerIndicator").style.width = currentPower + "%";
+            document.getElementById("bag").src = "./bag.png";
+        }
+    </script>
+</body>
+</html>

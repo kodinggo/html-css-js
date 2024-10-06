@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registerForm">
+        <p>
+            <label for="fullname">Full Name</label> <br>
+            <input type="text" id="fullname">
+        </p>
+        <p>
+            <label for="email">Email</label> <br>
+            <input type="email" id="email">
+        </p>
+        <p>
+            <label for="biodata">Biodata</label> <br>
+            <textarea id="biodata"></textarea>
+        </p>
+        <p>
+            Birthday: <br>
+            <select id="day">
+                <option value="">-- Day --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select id="month">
+                <option value="">-- Month --</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+            </select>
+            <select id="year">
+                <option value="">-- Year --</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+            </select>
+        </p>
+        <p>
+            Hobbies: <br>
+            <input type="checkbox" id="readingBooks" name="hobbies" value="Reading books"> 
+            <label for="readingBooks">Reading books</label> <br>
+            <input type="checkbox" id="playingGames" name="hobbies" value="Playing games">
+            <label for="playingGames">Playing games</label>
+        </p>
+        <p>
+            Gender: <br>
+            <input type="radio" id="male" name="gender" value="male"> 
+            <label for="male">Male</label> <br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </p>
+        <p><button>Sign Up</button></p>
+    </form>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var fullname, email, biodata, birthday, gender;
+            var hobbies = [];
+
+            fullname = document.getElementById('fullname').value;
+            email = document.getElementById('email').value;
+            biodata = document.getElementById('biodata').value;
+
+            var day, month, year;
+
+            day = document.forms['registerForm']['day'].value;
+            month = document.forms['registerForm']['month'].value;
+            year = document.forms['registerForm']['year'].value;
+            birthday = day + '/' + month + '/' + year;
+
+            hobbiesData = document.forms['registerForm']['hobbies'];
+            for (i = 0; i < hobbiesData.length; i++) {
+                if (hobbiesData[i].checked) {
+                    hobbies.push(hobbiesData[i].value);
+                }
+            }
+
+            genderData = document.forms['registerForm']['gender'];
+            for (i = 0; i < genderData.length; i++) {
+                if (genderData[i].checked) {
+                    gender = genderData[i].value;
+                    break;
+                }
+            }
+
+            console.log('Full Name', fullname);
+            console.log('Email', email);
+            console.log('Biodata', biodata);
+            console.log('Birthday', birthday);
+            console.log('Hobbies', hobbies);
+            console.log('Gender', gender);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+:root {
+    --bg-header: aquamarine;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table1 {
+    border-collapse: collapse;
+}
+/* Memberikan style untuk selector lebih dari 1 (dg koma) */
+.table1 th, .table1 td {
+    border: 1px solid rgb(189, 189, 189);
+    padding: 10px;
+}
+.table1 th {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.table1 thead {
+    background-color: var(--bg-header);
+}
+/* Memberikan style untuk tag <tr> yg berada di dalam tag <tbody> */
+.table1 tbody tr:nth-child(even) {
+    background-color: rgb(223, 223, 223);
+}
+
+/* 
+Catatan:
+
+1. Multiple Selector (dipisahkan dg koma)
+selector1, selector2, selector3 {
+
+}
+
+2. Parent-Child Selector (dipisahkan dg spasi)
+selector-parent selector-child {
+
+}
+*/

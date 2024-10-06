@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            padding: 10px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        tabindex="0" digunakan untuk membuat non-form element menjadi mode focus
+        mode focus ini artinya sebuah element html dapat menerima input dari keyboard
+     -->
+    <div id="paper" tabindex="0">
+        Write anything here!
+    </div>
+
+    <script>
+        let content = '';
+
+        document.getElementById('paper').addEventListener('keyup', function(event) {
+            if (event.key === 'Meta' || event.key === 'CapsLock' || event.key === 'Shift') {
+                event.preventDefault();
+                return
+            }
+
+            if (event.key === 'Enter') {
+                content += '<br>';
+            } else if (event.key === ' ') {
+                content += '&nbsp;';
+            } else if (event.key === 'Backspace') {
+                // Check if the last entity is &nbsp; or <br>
+                if (content.slice(-6) === '&nbsp;') {
+                    content = content.slice(0, -6); // remove &nbsp;
+                } else if (content.slice(-4) === '<br>') {
+                    content = content.slice(0, -4); // remove <br>
+                } else {
+                    content = content.slice(0, -1); // remove last character
+                }
+            } else {
+                content += event.key;
+            }
+
+            this.innerHTML = content || 'Write anything here!';
+        });
+
+        document.getElementById('paper').addEventListener('blur', function(event) {
+            content = '';
+            this.innerHTML = 'Write anything here!';
+        });
+    </script>
+</body>
+</html>

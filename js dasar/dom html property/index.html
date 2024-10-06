@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <div id="test3">
+        <h1>Judul</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facere reiciendis, a laborum exercitationem nulla ex quo sed tempore non esse fugit repellendus veritatis molestias atque labore ducimus soluta suscipit.</p>
+        <button>Click Me</button>
+    </div>
+    
+    <input type="text" id="nama">
+
+    <script>
+        document.getElementById('test1').innerHTML = '<h1>Hello</h1>';
+        document.getElementById('test2').innerText = 'Hello';
+
+        var text = document.getElementById('test3').textContent;
+        console.log(text);
+
+        document.getElementById('nama').value = 'Bambang';
+    </script>
+</body>
+</html>

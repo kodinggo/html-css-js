@@ -1,0 +1,37 @@
+p {
+    text-align: left;
+    text-indent: 10px;
+    line-height: 20px;
+    white-space: wrap;
+}
+h1 {
+    text-decoration: underline;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 10px #000;
+}
+h2 {
+    text-transform: capitalize;
+    word-spacing: 20px;
+}
+/* Border */
+h3 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: brown;
+}
+h4 {
+    border: 1px solid yellow;
+}
+h5 {
+    border-bottom: 1px solid purple;
+}
+/* Border radius */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border-radius: 30px;
+}
+img {
+    border-radius: 30px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+
+    <p id="content"></p>
+
+    <p class="paragraf"></p>
+    <p class="paragraf"></p>
+    <p class="paragraf"></p>
+    
+    <script>
+        document.getElementById('title').innerHTML = 'Hello World';
+        document.querySelector('#content').innerHTML = 'Lorem ipsum bla blah';
+
+        var elementParagraf = document.getElementsByClassName('paragraf');
+        for (i = 0; i < elementParagraf.length; i++) {
+            elementParagraf[i].innerHTML = 'Coba'
+        }
+    </script>
+</body>
+</html>

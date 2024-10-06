@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+p, li, a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+}
+
+/* Nav */
+nav {
+    overflow: hidden;
+    background-color: rgb(208, 208, 208);
+    padding: 0 50px;
+}
+.logo {
+    float: left;
+    padding: 20px 0;
+}
+menu {
+    float: right;
+}
+menu li {
+    float: left;
+    list-style: none;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    overflow: hidden;
+    padding: 0 50px;
+    background-color: rgb(168, 168, 168);
+}
+.header-text {
+    float: left;
+    width: 500px;
+    padding: 260px 0;
+}
+.header-image {
+    float: right;
+    width: 500px;
+    padding: 50px;
+}
+.header-image img {
+    width: 100%;
+}
+
+/* Content */
+main {
+    overflow: hidden;
+    padding: 0 50px;
+    background-color: rgb(208, 208, 208);
+}
+main section {
+    float: left;
+    width: 306px;
+    padding: 50px;
+}
+main section img {
+    width: 100%;
+}
+.food-menu-title {
+    padding: 50px 0;
+}
+.food-menu-title p, .food-menu-title h1 {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    overflow: hidden;
+    background-color: gray;
+    padding: 20px 0;
+}
+footer p {
+    text-align: center;
+}

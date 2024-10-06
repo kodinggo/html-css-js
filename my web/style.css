@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+.header {
+    padding: 20px;
+    background-color: #B5C18E;
+}
+.menu {
+    padding: 20px;
+    background-color: #DEAC80;
+}
+.menu a {
+    padding: 5px 10px;
+    background-color: aquamarine;
+}
+.content {
+    padding: 20px;
+    background-color: #F7DCB9;
+}
+.footer {
+    padding: 20px;
+    background-color: #B99470;
+}

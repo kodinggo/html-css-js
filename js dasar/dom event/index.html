@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div 
+        id="box" 
+        onclick="handleClick(event)"
+        ondblclick="handleDoubleClick(event)"
+        onmouseover="handleMouseOver(event)"
+        onmouseout="handleMouseOut(event)"
+        onmousemove="handleMouseMove(event)"
+        onmousedown="handleMouseDown(event)"
+        onmouseup="handleMouseUp(event)"
+    ></div>
+
+    <script>
+        function handleClick(event) {
+            console.log('box diklik');
+        }
+        function handleDoubleClick(event) {
+            console.log('box diklik 2 kali');
+        }
+        function handleMouseOver(event) {
+            console.log('cursor masuk box');
+        }
+        function handleMouseOut(event) {
+            console.log('cursor keluar box');
+        }
+        function handleMouseMove(event) {
+            // console.log('cursor bergerak di dalam box', event.screenX, event.screenY);
+        }
+        function handleMouseDown(event) {
+            console.log('box ditekan');
+        }
+        function handleMouseUp(event) {
+            console.log('box dilepas');
+        }
+    </script>
+</body>
+</html>

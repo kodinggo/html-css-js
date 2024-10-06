@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="textbox"></textarea>
+
+    <script>
+        document.getElementById('textbox').addEventListener('keydown', function(event) {
+            console.log('tombol keyboard ditekan');
+            console.log(event.key);
+        })
+        document.getElementById('textbox').addEventListener('keyup', function(event) {
+            console.log('tombol keyboard dilepas');
+            console.log(event.key);
+        })
+    </script>
+</body>
+</html>

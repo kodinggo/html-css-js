@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game</title>
+    <style>
+        .bag, .button {
+            text-align: center;
+        }
+        .power {
+            width: 300px;
+            height: 40px;
+            background-color: gray;
+        }
+        #level {
+            width: 100%;
+            height: 40px;
+            background-color: blue;
+        }
+        .power {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <p class="bag">
+        <img src="./bag.png" id="bagImg" alt="">
+    </p>
+    <div class="power">
+        <div id="level"></div>
+    </div>
+    <p class="button">
+        <button id="punch">Punch</button>
+        <button id="reset">Reset</button>
+    </p>
+
+    <script>
+        var currentLevel = 100;
+
+        // function handlePunch() {
+        //     // cek apakah currentLevel lebih dari 0
+        //     if (currentLevel > 0) {
+        //         currentLevel -= 10;
+        //         document.getElementById('level').style.width = `${currentLevel}%`;
+
+        //         if (currentLevel == 0) {
+        //             document.getElementById('bagImg').src = './bag-burst.png';
+        //         }
+        //     }
+        // }
+
+        // function handleReset() {
+        //     currentLevel = 100;
+        //     document.getElementById('level').style.width = `${currentLevel}%`;
+        //     document.getElementById("bagImg").src = "./bag.png";
+        // }
+
+        document.getElementById('punch').addEventListener('click', function() {
+            // cek apakah currentLevel lebih dari 0
+            if (currentLevel > 0) {
+                currentLevel -= 10;
+                document.getElementById('level').style.width = `${currentLevel}%`;
+
+                if (currentLevel == 0) {
+                    document.getElementById('bagImg').src = './bag-burst.png';
+                }
+            }
+        });
+        document.getElementById('reset').addEventListener('click', function() {
+            currentLevel = 100;
+            document.getElementById('level').style.width = `${currentLevel}%`;
+            document.getElementById("bagImg").src = "./bag.png";
+        });
+    </script>
+</body>
+</html>

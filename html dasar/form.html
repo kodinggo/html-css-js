@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+<h2>LogIn Form</h2>
+<form action="">
+    <input type="text" placeholder="Username"> <br>
+    <input type="password" placeholder="Password"> <br>
+    <input type="submit" value="LogIn">
+</form>
+
+<h2>Register Form</h2>
+<form action="">
+    <!-- First Name -->
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName"> <br>
+    <!-- Last Name -->
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName"> <br>
+    <!-- Bidata -->
+    <label for="biodata">Biodata</label>
+    <textarea id="biodata"></textarea> <br>
+    <!-- Gender -->
+    <strong>Gender</strong> <br>
+    <input type="radio" id="male" name="gender">
+    <label for="male">Male</label> <br>
+    <input type="radio" id="famale" name="gender">
+    <label for="famale">Female</label> <br>
+    <!-- Hobby -->
+    <strong>Hobbies</strong> <br>
+    <input type="checkbox" id="playingGame">
+    <label for="playingGame">Playing Game</label> <br>
+    <input type="checkbox" id="readBook">
+    <label for="readBook">Read the Book</label> <br>
+    <!-- Birth Day -->
+    <strong>Birthday</strong> <br>
+    <label for="day">Day</label>
+    <select name="day" id="day">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    Month
+    <select name="month" id="month">
+        <option value="1">Januari</option>
+        <option value="2">Februari</option>
+        <option value="3">Maret</option>
+    </select>
+    Year
+    <select name="year" id="year">
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+    </select>
+    <br>
+    <br>
+    <!-- Button -->
+    <input type="submit" value="SignUp">
+    <button>Cancel</button>
+</form>
+
+</body>
+</html>

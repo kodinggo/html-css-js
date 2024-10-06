@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="fullname" name="fullname"> <br>
+        <textarea id="biodata"></textarea> <br>
+        <select id="birthDate">
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+        </select> <br>
+        hobbies: <br>
+        <input type="checkbox" name="hobbies" value="makan"> Makan <br>
+        <input type="checkbox" name="hobbies" value="olah raga"> Olah raga <br>
+        <input type="checkbox" name="hobbies" value="baca buku"> Baca buku <br>
+        gender: <br>
+        <input type="radio" name="gender" value="male" checked> Male <br>
+        <input type="radio" name="gender" value="famale"> Famale <br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Cara pertama
+            console.log('----- cara 1 -------')
+            var fullname = document.getElementById('fullname').value;
+            var biodata = document.getElementById('biodata').value;
+            var birthDate = document.getElementById('birthDate').value;
+
+            var hobbies = Array.from(document.querySelectorAll('input[name="hobbies"]:checked')).map(el => el.value);
+
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            console.log(fullname);
+            console.log(biodata);
+            console.log(birthDate);
+            console.log(hobbies);
+            console.log(gender);
+
+            // Cara kedua
+            console.log('----- cara 2 -------')
+            let fullName2 = document.forms["myForm"]["fullname"].value;
+            console.log(fullName2);
+            // let gender2 = document.forms["myForm"]['gender:checked'].value;
+            // console.log(gender2);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div onmousemove="handleMouseMove(event)" 
+        onmouseover="handleMouseOver(event)"
+        onmouseout="handleMouseOut(event)"
+        onmousedown="handleMouseDown(event)"
+        onmouseup="handleMouseUp(event)"
+        onmouseenter="handleMouseEnter(event)"
+        onmouseleave="handleMouseLeave(event)"></div>
+    <script>
+        function handleMouseMove(event) {
+            // console.log("mouse move", event.screenX, event.screenY);
+        }
+        function handleMouseOver(event) {
+            console.log("mouse masuk box");
+        }
+        function handleMouseOut(event) {
+            console.log("mouse keluar box");
+        }
+        function handleMouseDown(event) {
+            console.log("mouse menekan box");
+        }
+        function handleMouseUp(event) {
+            console.log("mouse melepas box");
+        }
+        function handleMouseEnter(event) {
+            console.log("mouse enter box");
+        }
+        function handleMouseLeave(event) {
+            console.log("mouse leave box");
+        }
+    </script>
+</body>
+</html>
